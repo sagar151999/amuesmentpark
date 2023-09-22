@@ -24,19 +24,19 @@ public class TicketsTest {
 
     @Test
     public void testTicketWithHolderConstruction() {
-        Tickets ticket = new Tickets(102, "child", "Yash Doke", new Date(), 120);
+        Tickets ticket = new Tickets(102, "child", "Sagar Jadhav", new Date(), 120);
         assertNotNull(ticket);
         assertEquals(102, ticket.getTicket());
         assertEquals("child", ticket.getCategory());
         assertEquals(120, ticket.getPrice(), 0.01);
         assertEquals("Available", ticket.getAvalabilty());
-        assertEquals("Yash Doke", ticket.getHolder());
+        assertEquals("Sagar Jadhav", ticket.getHolder());
     }
 
     @Test
     public void testTicketToString() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = sdf.parse("2023-09-30");
+        Date date = sdf.parse("2023-08-25");
         Tickets ticket = new Tickets(103, "senior", date, 350);
         String expectedString = "Tickets [ticket: 103, category: senior, holder: null, date: Sat 2023.09.30, price: 350.0Avalabilty: Available]";
         assertEquals(expectedString, ticket.toString());

@@ -33,12 +33,12 @@ public class AmusementParkTest {
     public void testBookTicket() {
         Tickets ticket = new Tickets(102, "child", new Date(), 120);
         amusementPark.addTicket(ticket);
-        amusementPark.bookTicket(102, "Yash Doke");
+        amusementPark.bookTicket(102, "Sagar Jadhav");
         Vector<Tickets> bookedTickets = amusementPark.bookedTickets();
         Vector<Tickets> availableTickets = amusementPark.getTickets();
         assertEquals(1, bookedTickets.size());
         assertEquals(0, availableTickets.size());
         assertEquals("Unavilable", bookedTickets.get(0).getAvalabilty());
-        assertEquals("Yash Doke", bookedTickets.get(0).getHolder());
+        assertEquals("Sagar Jadhav", bookedTickets.get(0).getHolder());
     }
 }
